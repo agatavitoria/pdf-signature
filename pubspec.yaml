@@ -1,0 +1,28 @@
+name: signature_pdf
+description: A new Flutter project.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.0
+  pdf: ^2.1.0
+  path_provider: ^1.6.11
+  printing: ^4.1.0
+  advance_pdf_viewer: ^1.2.2
+  flutter_widget_from_html_core: ^0.5.2+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/usuarios_app.pdf
