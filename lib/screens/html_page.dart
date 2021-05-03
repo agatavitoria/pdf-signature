@@ -40,7 +40,7 @@ class _HtmlPageState extends State<HtmlPage> {
       return Center(
         child: Container(
           child: RaisedButton(
-            child: Text("Clica aqui para assinar"),
+            child: Text("ASSINAR"),
             onPressed: () => _getAssinatura(),
           ),
         ),
@@ -57,15 +57,17 @@ class _HtmlPageState extends State<HtmlPage> {
           appBar: AppBar(
             title: Text('HTML PAGE'),
           ),
-          backgroundColor: Colors.orange,
           body: SingleChildScrollView(
-            child: Column(
-              children: [
-                HtmlWidget(
-                  Environment.html,
-                  customWidgetBuilder: _signatureButton,
-                ),
-              ],
+            child: Container(
+              margin: EdgeInsets.all(20),
+              child: Column(
+                children: [
+                  HtmlWidget(
+                    Environment.html,
+                    customWidgetBuilder: _signatureButton,
+                  ),
+                ],
+              ),
             ),
           ),
         ),

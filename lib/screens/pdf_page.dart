@@ -59,9 +59,11 @@ class _PDFPageState extends State<PDFPage> {
           : PDFViewer(
               document: _document,
               zoomSteps: 1,
+              showPicker: false,
+              showNavigation: false,
             ),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.auto_fix_normal),
+        child: Icon(Icons.brush),
         onPressed: _getAssinatura,
       ),
     );
