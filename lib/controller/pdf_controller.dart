@@ -1,6 +1,5 @@
 import 'dart:io';
 import 'dart:typed_data';
-import 'package:advance_pdf_viewer/advance_pdf_viewer.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:pdf/pdf.dart';
@@ -44,12 +43,10 @@ class PDFController {
     return file;
   }
 
-  static openPDFPage(File pdfFile, BuildContext context) async {
-    PDFDocument document = await PDFDocument.fromFile(pdfFile);
-
+  static openPDFPage(BuildContext context) async {
     return Navigator.push(
       context,
-      CupertinoPageRoute(builder: (context) => my.PDFPage(document: document)),
+      CupertinoPageRoute(builder: (context) => my.PDFPage()),
     );
   }
 }
